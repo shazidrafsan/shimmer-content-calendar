@@ -1,6 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Cormorant_Garamond } from "next/font/google";
+import BottomNav from "@/components/BottomNav";
 
 const wordmark = Cormorant_Garamond({
   weight: ["500", "600"],
@@ -29,7 +30,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={wordmark.variable}>
-      <body className="min-h-screen">{children}</body>
+      <body className="min-h-screen pb-14">
+        {children}
+        <BottomNav />
+      </body>
     </html>
   );
 }
