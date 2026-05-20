@@ -3,7 +3,10 @@
 import { useCallback, useMemo, useState } from "react";
 import PostCard from "./Post";
 import StoryViewer from "./StoryViewer";
-import { posts as allPosts } from "@/lib/posts";
+import { posts as rawPosts } from "@/lib/posts";
+
+// Show newest posts first (Day 22 → Day 1)
+const allPosts = [...rawPosts].reverse();
 
 const FILTERS = [
   { key: "all", label: "All" },

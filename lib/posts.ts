@@ -11,6 +11,7 @@ export type Post = {
   pillar: string;
   media: MediaItem[];
   productLink: string;
+  linkLabel?: string;
   caption: string;
   hashtags: string;
   purpose: string;
@@ -286,6 +287,51 @@ const raw: Omit<Post, "id" | "media"> & { asset: string }[] = [
       "#shimmerthelabel #whitedress #weddingguest #flatlay #engagementoutfit #bridal",
     purpose: "Wedding/engagement intent.",
   },
+  {
+    slot: "Day 20",
+    platform: "IG and FB",
+    contentType: "Carousel",
+    pillar: "Coming Soon / Teaser",
+    asset: "green/1.png green/2.png green/3.png green/4.png",
+    productLink: "https://www.shimmerthelabel.com.au",
+    linkLabel: "Explore the collection →",
+    caption:
+      "Mediterranean by accident. ✨\nThe Capri Shirt Dress in Emerald — pleated, tied, ready for trattoria afternoons.\n\n⚡ Not online yet. Be first when it drops — head to shimmerthelabel.com.au and join the list. Slide → for the full edit.",
+    hashtags:
+      "#shimmerthelabel #greendress #shirtdress #italiansummer #comingsoon #newin #joinwaitlist",
+    purpose:
+      "Teaser drop — drive newsletter sign-ups and homepage traffic ahead of the on-site launch.",
+  },
+  {
+    slot: "Day 21",
+    platform: "IG and FB",
+    contentType: "Carousel",
+    pillar: "Coming Soon / Teaser",
+    asset: "colored/1.png colored/2.png colored/3.png colored/4.png",
+    productLink: "https://www.shimmerthelabel.com.au",
+    linkLabel: "Explore the collection →",
+    caption:
+      "Paisley. Petals. A house full of jasmine. 🌿\nThe Wildflower Maxi — long sleeves, soft tiers, all the romance.\n\n⚡ Coming soon to the site. Sign up at shimmerthelabel.com.au and we'll tell you first. Swipe → to see her move.",
+    hashtags:
+      "#shimmerthelabel #paisleyprint #maxidress #boho #wildflower #newarrival #comingsoon",
+    purpose:
+      "Lifestyle teaser — saves + email captures ahead of launch.",
+  },
+  {
+    slot: "Day 22",
+    platform: "IG and FB",
+    contentType: "Carousel",
+    pillar: "Coming Soon / Teaser",
+    asset: "black/1.png black/2.png black/3.png black/4.png",
+    productLink: "https://www.shimmerthelabel.com.au",
+    linkLabel: "Explore the collection →",
+    caption:
+      "Black, but make it bloom. 🌑🌿\nThe Noir Garden Maxi — botanical print, tiered hem, made to twirl.\n\n⚡ Not on the site (yet). Visit shimmerthelabel.com.au to be the first to shop the drop — and explore the current edit while you wait.",
+    hashtags:
+      "#shimmerthelabel #blackmaxi #floralprint #botanicalprint #comingsoon #newin #onthelist",
+    purpose:
+      "Premium teaser — drive collection-page traffic and waitlist sign-ups.",
+  },
 ] as any;
 
 export const posts: Post[] = (raw as any[]).map((p, idx) => ({
@@ -295,6 +341,7 @@ export const posts: Post[] = (raw as any[]).map((p, idx) => ({
   contentType: p.contentType,
   pillar: p.pillar,
   productLink: p.productLink,
+  linkLabel: p.linkLabel,
   caption: p.caption,
   hashtags: p.hashtags,
   purpose: p.purpose,

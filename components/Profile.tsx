@@ -2,7 +2,10 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { posts as allPosts } from "@/lib/posts";
+import { posts as rawPosts } from "@/lib/posts";
+
+// Newest first
+const allPosts = [...rawPosts].reverse();
 
 const HIGHLIGHTS = [
   { label: "New In", cover: "/assets/images/14.png" },

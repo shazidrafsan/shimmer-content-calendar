@@ -128,7 +128,7 @@ export default function PostCard({ post }: { post: Post }) {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1 rounded-md bg-neutral-900 px-3 py-1.5 text-xs font-medium text-white"
           >
-            Shop the look →
+            {post.linkLabel ?? "Shop the look →"}
           </a>
         </div>
       )}
