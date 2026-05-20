@@ -332,6 +332,34 @@ const raw: Omit<Post, "id" | "media"> & { asset: string }[] = [
     purpose:
       "Premium teaser — drive collection-page traffic and waitlist sign-ups.",
   },
+  {
+    slot: "Day 23",
+    platform: "IG, FB and Tiktok",
+    contentType: "Video",
+    pillar: "Video / Reels",
+    asset: "Vid-4.mp4",
+    productLink: "https://www.shimmerthelabel.com.au",
+    linkLabel: "Explore the collection →",
+    caption:
+      "Soft light. Slow morning. The day asks nothing of you. ✨\nThe Shimmer ritual — press play, stay a while.",
+    hashtags:
+      "#shimmerthelabel #fashionreels #slowfashion #morningmood #ootd #dressreels #newin",
+    purpose: "Hero mood reel — engagement, saves, follower growth.",
+  },
+  {
+    slot: "Day 24",
+    platform: "IG, FB and Tiktok",
+    contentType: "Video",
+    pillar: "Video / Reels",
+    asset: "Vid-5.mp4",
+    productLink: "https://www.shimmerthelabel.com.au",
+    linkLabel: "Explore the collection →",
+    caption:
+      "Linen breeze, golden hour, your favourite song on repeat. 🌅\nThe Shimmer afternoon — made for moving.",
+    hashtags:
+      "#shimmerthelabel #goldenhour #fashionreels #ootd #dressreels #summerstyle #newin",
+    purpose: "Hero mood reel — drive collection-page traffic and saves.",
+  },
 ] as any;
 
 export const posts: Post[] = (raw as any[]).map((p, idx) => ({
